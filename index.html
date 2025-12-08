@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RC - Bolsas Personalizadas con Propósito</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#inicio">RC</a>
+            <a class="navbar-brand" href="#inicio">
+                <img src="./img/RC_Logo_Transparent.png" alt="Logo RC Insumos" width="60px">
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,8 +47,7 @@
                     <a href="#contacto" class="btn btn-primary btn-lg">Pedí tu presupuesto</a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="/placeholder.svg?height=500&width=600" 
-                         alt="Bolsas personalizadas RC" class="img-fluid rounded shadow">
+                    <img src="./img/hero.png" alt="Bolsas personalizadas RC" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -53,28 +59,27 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
                     <h2 class="section-title">¿Quiénes somos?</h2>
-                    <p class="lead">Nacimos en pandemia con el foco puesto en la conciencia, calidad y propósito. 
-                    Creamos packaging reutilizable que no solo protege tus productos, sino que cuenta tu historia.</p>
+                    <p class="lead">Nacimos en pandemia con el foco puesto en la conciencia, calidad y propósito.
+                        Creamos packaging reutilizable que no solo protege tus productos, sino que cuenta tu historia.
+                    </p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 text-center mb-4">
                     <div class="value-card">
-                        <i class="fas fa-award fa-3x mb-3 text-primary"></i>
                         <h4>Calidad</h4>
                         <p>Materiales premium y acabados impecables en cada bolsa que producimos.</p>
+                        <img src="./img/sellado_ultrasonido.jpg" alt="" width="300px">
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="value-card">
-                        <i class="fas fa-lightbulb fa-3x mb-3 text-primary"></i>
                         <h4>Innovación</h4>
                         <p>Técnicas de personalización avanzadas para hacer realidad tu visión.</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center mb-4">
                     <div class="value-card">
-                        <i class="fas fa-leaf fa-3x mb-3 text-primary"></i>
                         <h4>Sostenibilidad</h4>
                         <p>Packaging reutilizable que cuida el medio ambiente y tu marca.</p>
                     </div>
@@ -92,38 +97,128 @@
                     <p class="lead">Descubrí nuestra variedad de bolsas personalizables</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="productosContainer">
                 <div class="col-md-4 mb-4">
                     <div class="card product-card h-100">
-                        <img src="/placeholder.svg?height=250&width=400" 
-                             class="card-img-top" alt="Bolsa estándar">
+                        <div class="image-container">
+                            <img src="./img/riñon_x3.jpg" class="card-img-top product-image" alt="Bolsa Riñón"
+                                onclick="openZoom(this.src, this.alt)">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Bolsa Estándar</h5>
-                            <p class="card-text">Bolsa clásica de friselina, perfecta para cualquier ocasión. Disponible en múltiples colores.</p>
+                            <h5 class="card-title">Bolsa Riñón</h5>
+                            <p class="card-text">Bolsa clásica de friselina, perfecta para cualquier ocasión. Disponible
+                                en múltiples colores.</p>
                             <a href="#contacto" class="btn btn-outline-primary">Consultar modelo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card product-card h-100">
-                        <img src="/placeholder.svg?height=250&width=400" 
-                             class="card-img-top" alt="Bolsa personalizada">
+                        <div class="image-container">
+                            <img src="/img/personalizada_1.jpg" class="card-img-top product-image"
+                                alt="Bolsa personalizada" onclick="openZoom(this.src, this.alt)">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Bolsa Personalizada</h5>
-                            <p class="card-text">Tu diseño o logo sublimado con la más alta calidad. Ideal para eventos y promociones.</p>
+                            <p class="card-text">Tu diseño o logo sublimado con la más alta calidad. Ideal para eventos
+                                y promociones.</p>
                             <a href="#contacto" class="btn btn-outline-primary">Consultar modelo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card product-card h-100">
-                        <img src="/placeholder.svg?height=250&width=400" 
-                             class="card-img-top" alt="Bolsa con asas largas">
+                        <div class="image-container">
+                            <img src="./img/asas_x3.jpg" class="card-img-top product-image" alt="Bolsa con asas largas"
+                                onclick="openZoom(this.src, this.alt)">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Bolsa con Asas Largas</h5>
-                            <p class="card-text">Mayor comodidad para transportar. Perfecta para compras y uso diario.</p>
+                            <p class="card-text">Mayor comodidad para transportar. Perfecta para compras y uso diario.
+                            </p>
                             <a href="#contacto" class="btn btn-outline-primary">Consultar modelo</a>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Productos ocultos que se mostrarán al hacer clic en "Ver más" -->
+                <div class="col-md-4 mb-4 producto-adicional" style="display: none;">
+                    <div class="card product-card h-100">
+                        <div class="image-container">
+                            <img src="/img/ahorque_x3.jpg" class="card-img-top product-image" alt="Bolsa Ahorque"
+                                onclick="openZoom(this.src, this.alt)">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bolsa Ahorque</h5>
+                            <p class="card-text">Bolsa funcional con sistema de cierre ajustable mediante
+                                cordón. Disponible en múltiples colores.
+                            </p>
+                            <a href="#contacto" class="btn btn-outline-primary">Consultar modelo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 producto-adicional" style="display: none;">
+                    <div class="card product-card h-100">
+                        <div class="image-container">
+                            <img src="/img/sobre_x3.jpg" class="card-img-top product-image" alt="Bolsa Ecológica Kraft"
+                                onclick="openZoom(this.src, this.alt)">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bolsa Sobre</h5>
+                            <p class="card-text">Elegante bolsa plana sin fuelle, perfecta para
+                                documentos o presentaciones cuidadas. Disponible en múltiples
+                                colores.</p>
+                            <a href="#contacto" class="btn btn-outline-primary">Consultar modelo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón "Ver más" para mostrar productos adicionales -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <button id="verMasBtn" class="btn btn-primary btn-lg" onclick="toggleProductos()">
+                        Ver más productos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de remeras como novedad -->
+    <section id="remeras" class="py-5 bg-white">
+        <div class="container">
+
+            <div class="row align-items-center feature-card mx-0">
+
+                <div class="new-badge">
+                    <i class="bi bi-star-fill me-1"></i> ¡NUEVO!
+                </div>
+
+                <div class="col-md-6 p-0 image-col">
+                    <div class="image-container">
+                        <img src="./img/remera_1.jpg" class="img-fluid product-image"
+                            alt="Remeras Personalizadas Premium" onclick="openZoom(this.src, this.alt)">
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-col">
+                    <h2 class="fw-bold mb-3 section-title-remeras">Remeras Personalizadas</h2>
+                    <p class="text-muted mb-4 description-remeras">
+                        Llevá tu marca al siguiente nivel. Incorporamos indumentaria con la misma calidad de confección
+                        que nuestras bolsas.
+                    </p>
+
+                    <ul class="list-unstyled mb-4 features-list">
+                        <li class="mb-2">✅ <strong>100% Algodón</strong> premium.</li>
+                        <li class="mb-2">✅ Estampados durables.</li>
+                        <li class="mb-2">✅ Talles del S al XXL.</li>
+                    </ul>
+
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="#contacto" class="btn btn-primary btn-lg px-4 shadow-sm">
+                            Pedir Presupuesto
+                        </a>
                     </div>
                 </div>
             </div>
@@ -131,7 +226,7 @@
     </section>
 
     <!-- Proceso de Personalización  -->
-    <section id="proceso" class="py-5">
+    <section id="proceso" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
@@ -143,7 +238,7 @@
                 <div class="col-md-3 text-center mb-4">
                     <div class="process-step">
                         <div class="step-number">1</div>
-                        <i class="fas fa-shopping-bag fa-2x mb-3"></i>
+                        <i class="fas fa-shopping-bag fa-2x mb-3 mt-3"></i>
                         <h5>Elegí tu modelo</h5>
                         <p>Seleccioná el tipo de bolsa que mejor se adapte a tus necesidades.</p>
                     </div>
@@ -151,7 +246,7 @@
                 <div class="col-md-3 text-center mb-4">
                     <div class="process-step">
                         <div class="step-number">2</div>
-                        <i class="fas fa-palette fa-2x mb-3"></i>
+                        <i class="fas fa-palette fa-2x mb-3  mt-3"></i>
                         <h5>Enviá tu diseño</h5>
                         <p>Compartí tu logo o diseño. Te ayudamos a adaptarlo si es necesario.</p>
                     </div>
@@ -159,7 +254,7 @@
                 <div class="col-md-3 text-center mb-4">
                     <div class="process-step">
                         <div class="step-number">3</div>
-                        <i class="fas fa-ruler fa-2x mb-3"></i>
+                        <i class="fas fa-ruler fa-2x mb-3  mt-3"></i>
                         <h5>Confirmá detalles</h5>
                         <p>Definimos medidas, cantidad, colores y tipo de friselina juntos.</p>
                     </div>
@@ -167,22 +262,9 @@
                 <div class="col-md-3 text-center mb-4">
                     <div class="process-step">
                         <div class="step-number">4</div>
-                        <i class="fas fa-truck fa-2x mb-3"></i>
+                        <i class="fas fa-truck fa-2x mb-3  mt-3"></i>
                         <h5>¡Listo!</h5>
                         <p>Te enviamos tu pedido a todo el país. Packaging único para tu marca.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-8 mx-auto">
-                    <div class="info-box">
-                        <h5>Información adicional:</h5>
-                        <ul>
-                            <li><strong>Tipos de friselina:</strong> 80gr, 90gr y 100gr disponibles</li>
-                            <li><strong>Sublimación:</strong> Colores vibrantes y duraderos</li>
-                            <li><strong>Colores:</strong> Amplia gama de colores base disponibles</li>
-                            <li><strong>Cantidad mínima:</strong> Consultá por tu pedido específico</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -190,7 +272,7 @@
     </section>
 
     <!-- Testimonios  -->
-    <section id="testimonios" class="py-5 bg-light">
+    <section id="testimonios" class="py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
@@ -204,12 +286,14 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <div class="testimonial-card text-center">
-                                    <img src="/placeholder.svg?height=80&width=80" 
-                                         class="rounded-circle mb-3" alt="Cliente">
+                                    <img src="/placeholder.svg?height=80&width=80" class="rounded-circle mb-3"
+                                        alt="Cliente">
                                     <blockquote class="blockquote">
-                                        <p>"Desde que uso las bolsas de RC, mi packaging se ve increíble. Mis clientes siempre comentan lo lindas que son."</p>
+                                        <p>"Desde que uso las bolsas de RC, mi packaging se ve increíble. Mis clientes
+                                            siempre comentan lo lindas que son."</p>
                                     </blockquote>
-                                    <footer class="blockquote-footer">María González, <cite>Tienda de ropa</cite></footer>
+                                    <footer class="blockquote-footer">María González, <cite>Tienda de ropa</cite>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
@@ -218,12 +302,14 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <div class="testimonial-card text-center">
-                                    <img src="/placeholder.svg?height=80&width=80" 
-                                         class="rounded-circle mb-3" alt="Cliente">
+                                    <img src="/placeholder.svg?height=80&width=80" class="rounded-circle mb-3"
+                                        alt="Cliente">
                                     <blockquote class="blockquote">
-                                        <p>"La calidad es excelente y el servicio súper personalizado. Recomiendo RC al 100%."</p>
+                                        <p>"La calidad es excelente y el servicio súper personalizado. Recomiendo RC al
+                                            100%."</p>
                                     </blockquote>
-                                    <footer class="blockquote-footer">Carlos Ruiz, <cite>Productos artesanales</cite></footer>
+                                    <footer class="blockquote-footer">Carlos Ruiz, <cite>Productos artesanales</cite>
+                                    </footer>
                                 </div>
                             </div>
                         </div>
@@ -232,10 +318,11 @@
                         <div class="row">
                             <div class="col-lg-8 mx-auto">
                                 <div class="testimonial-card text-center">
-                                    <img src="/placeholder.svg?height=80&width=80" 
-                                         class="rounded-circle mb-3" alt="Cliente">
+                                    <img src="/placeholder.svg?height=80&width=80" class="rounded-circle mb-3"
+                                        alt="Cliente">
                                     <blockquote class="blockquote">
-                                        <p>"Perfectas para mi emprendimiento. El proceso fue súper fácil y el resultado superó mis expectativas."</p>
+                                        <p>"Perfectas para mi emprendimiento. El proceso fue súper fácil y el resultado
+                                            superó mis expectativas."</p>
                                     </blockquote>
                                     <footer class="blockquote-footer">Ana Martínez, <cite>Repostería</cite></footer>
                                 </div>
@@ -243,10 +330,12 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
@@ -254,7 +343,7 @@
     </section>
 
     <!-- Contacto  -->
-    <section id="contacto" class="py-5">
+    <section id="contacto" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center mb-5">
@@ -266,11 +355,11 @@
                 <div class="col-lg-6 mb-4">
                     <div class="contact-info">
                         <h4 class="mb-4">Hablemos por WhatsApp</h4>
-                        <a href="https://wa.me/5491123456789?text=Hola! Me interesa conocer más sobre las bolsas personalizadas" 
-                           class="btn btn-success btn-lg mb-4">
+                        <a href="https://wa.me/5491123456789?text=Hola! Me interesa conocer más sobre las bolsas personalizadas"
+                            class="btn btn-success btn-lg mb-4">
                             <i class="fab fa-whatsapp me-2"></i>Contactar por WhatsApp
                         </a>
-                        
+
                         <div class="contact-details">
                             <div class="mb-3">
                                 <i class="fas fa-map-marker-alt me-2"></i>
@@ -300,8 +389,9 @@
                         </div>
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4" 
-                                      placeholder="Contanos sobre tu proyecto: tipo de bolsa, cantidad, diseño, etc." required></textarea>
+                            <textarea class="form-control" id="mensaje" rows="4"
+                                placeholder="Contanos sobre tu proyecto: tipo de bolsa, cantidad, diseño, etc."
+                                required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Enviar mensaje</button>
                     </form>
@@ -329,7 +419,17 @@
         </div>
     </footer>
 
+    <!-- Modal para visualizar imágenes en detalle -->
+    <div id="zoomModal" class="zoom-modal" onclick="closeZoom(event)">
+        <div class="zoom-modal-content">
+            <button class="zoom-close-btn" onclick="closeZoom()">&times;</button>
+            <img id="zoomImage" src="/placeholder.svg" alt="Detalle del producto">
+            <div id="zoomAlt" class="zoom-image-title"></div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -89,3 +89,48 @@ if (testimonialCarouselEl && window.bootstrap) {
     wrap: true,
   })
 }
+
+function toggleProductos() {
+  const productosAdiciones = document.querySelectorAll(".producto-adicional")
+  const btn = document.getElementById("verMasBtn")
+
+  productosAdiciones.forEach((producto) => {
+    if (producto.style.display === "none") {
+      producto.style.display = "block"
+      btn.textContent = "Ver menos productos"
+    } else {
+      producto.style.display = "none"
+      btn.textContent = "Ver más productos"
+    }
+  })
+}
+
+function openZoom(imageSrc, imageAlt) {
+  const modal = document.getElementById("zoomModal")
+  const zoomImage = document.getElementById("zoomImage")
+  const zoomAlt = document.getElementById("zoomAlt")
+
+  zoomImage.src = imageSrc
+  zoomAlt.textContent = imageAlt
+  modal.classList.add("active")
+  document.body.style.overflow = "hidden"
+}
+
+function closeZoom(event) {
+  const modal = document.getElementById("zoomModal")
+
+  if (event && event.target !== modal) {
+    return
+  }
+
+  modal.classList.remove("active")
+  document.body.style.overflow = "auto"
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeZoom()
+  }
+})
+
+

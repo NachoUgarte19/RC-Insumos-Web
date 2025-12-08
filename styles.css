@@ -1,11 +1,11 @@
-/* Variables de colores según manual de marca */
+/* Updated color palette to match brand guidelines */
 :root {
   --bg-primary: #fafafa;
   --bg-secondary: #ede8e0;
   --text-primary: #503200;
   --text-secondary: #4f4c47;
   --accent: #a9a098;
-  --primary-color: #6c5ce7;
+  --primary-color: #503200;
   --success-color: #00b894;
 }
 
@@ -48,7 +48,7 @@ h6 {
 }
 
 .nav-link:hover {
-  color: var(--primary-color) !important;
+  color: var(--accent) !important;
 }
 
 /* Hero Section */
@@ -73,6 +73,7 @@ h6 {
 .btn-primary {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+  color: white;
   font-weight: 500;
   padding: 12px 30px;
   border-radius: 50px;
@@ -80,10 +81,11 @@ h6 {
 }
 
 .btn-primary:hover {
-  background-color: #5a4fcf;
-  border-color: #5a4fcf;
+  background-color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
+  box-shadow: 0 5px 15px rgba(80, 50, 0, 0.3);
 }
 
 .btn-success {
@@ -106,6 +108,7 @@ h6 {
 .btn-outline-primary:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -261,7 +264,7 @@ h6 {
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.2rem rgba(108, 92, 231, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(80, 50, 0, 0.25);
 }
 
 .contact-details div {
@@ -288,7 +291,7 @@ footer {
 }
 
 .social-links a:hover {
-  color: var(--primary-color) !important;
+  color: var(--accent) !important;
 }
 
 /* Responsive */
@@ -308,6 +311,27 @@ footer {
   .testimonial-card {
     padding: 2rem;
   }
+
+  /* Estilos para imágenes de productos con tamaño uniforme y responsive */
+  .image-container {
+    aspect-ratio: 1;
+  }
+
+  .zoom-modal-content {
+    max-width: 95vw;
+    max-height: 80vh;
+    padding: 15px;
+  }
+
+  #zoomImage {
+    max-height: 60vh;
+  }
+
+  .zoom-close-btn {
+    font-size: 1.5rem;
+    right: 10px;
+    top: 5px;
+  }
 }
 
 /* Smooth scrolling */
@@ -321,6 +345,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -329,4 +354,286 @@ html {
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos para productos adicionales ocultos */
+.producto-adicional {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Estilos para botón "Ver más" */
+#verMasBtn {
+  position: relative;
+  overflow: hidden;
+}
+
+#verMasBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+#verMasBtn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Sección remeras con fondo alterno */
+#remeras {
+  background: linear-gradient(135deg, #ede8e0 0%, #fafafa 100%);
+}
+
+#remeras .section-title {
+  color: #503200;
+}
+
+/* Estilos para imágenes de productos con tamaño uniforme y responsive */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  aspect-ratio: 1;
+  border-radius: 12px 12px 0 0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+.zoom-badge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(80, 50, 0, 0.8);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .zoom-badge {
+  opacity: 1;
+}
+
+/* Modal para zoom de imágenes */
+.zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+.zoom-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoom-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.3s ease-out;
+}
+
+#zoomImage {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.zoom-image-title {
+  font-size: 1.3rem;
+  color: #503200;
+  font-family: "Bitter", serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.zoom-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #503200;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 1001;
+}
+
+.zoom-close-btn:hover {
+  color: #a9a098;
+}
+
+/* Actualizar altura de imágenes de productos a tamaño uniforme y responsive */
+.product-card .card-img-top {
+  height: auto;
+}
+
+/* =========================================
+   SECCIÓN DE REMERAS (MOBILE FIRST)
+   ========================================= */
+
+/* 1. Tarjeta contenedora */
+#remeras .feature-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Badge (Etiqueta de Novedad) */
+#remeras .new-badge {
+  position: absolute;
+  top: 25px;
+  left: -40px;
+  transform: rotate(-45deg);
+  width: 150px;
+  padding: 7px 0;
+
+  /* Estilos visuales */
+  background: #d32f2f;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 20;
+}
+
+/* 3. Contenedor de Imagen (BASE - MÓVIL) */
+#remeras .image-container {
+  width: 100%;
+  /* Altura moderada para que no ocupe toda la pantalla del celular */
+  min-height: 280px;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 4. Imagen */
+#remeras .product-image {
+  width: 100%;
+  height: 100%;
+  /* Aspect-ratio ayuda a evitar saltos de carga en móviles modernos */
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+/* 5. Columna de Texto (BASE - MÓVIL) */
+#remeras .text-col {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+/* Títulos y textos base (Móvil) */
+#remeras .section-title-remeras {
+  font-size: 1.75rem;
+}
+
+#remeras .description-remeras {
+  font-size: 1rem;
+}
+
+#remeras .features-list li {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+}
+
+/* -----------------------------------------
+   MEDIA QUERIES (ESCRITORIO / TABLET)
+   ----------------------------------------- */
+@media (min-width: 768px) {
+
+  /* Hover solo tiene sentido con mouse (Desktop) */
+  #remeras .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  #remeras .image-container:hover .product-image {
+    transform: scale(1.05);
+  }
+
+  #remeras .image-container {
+    min-height: 450px;
+    height: 100%;
+  }
+
+  #remeras .product-image {
+    aspect-ratio: auto;
+  }
+
+  #remeras .text-col {
+    padding: 3rem 3rem 3rem 2rem;
+  }
+
+  #remeras .section-title-remeras {
+    font-size: 2.5rem;
+  }
+
+  #remeras .description-remeras {
+    font-size: 1.15rem;
+  }
+
+  #remeras .features-list li {
+    font-size: 1.1rem;
+  }
+
+  /* Badge un poco más grande */
+  #remeras .new-badge {
+    top: 35px;
+    left: -45px;
+    width: 180px;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
 }
