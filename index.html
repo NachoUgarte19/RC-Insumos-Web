@@ -40,14 +40,42 @@
     <!-- Hero Section  -->
     <section id="inicio" class="hero-section">
         <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-6">
+            <div class="row align-items-center position-relative hero-grande">
+                <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="display-4 fw-bold mb-4">Bolsas personalizadas con propósito</h1>
                     <p class="lead mb-4">Packaging reutilizable y único para tu emprendimiento</p>
                     <a href="#contacto" class="btn btn-primary btn-lg">Pedí tu presupuesto</a>
                 </div>
-                <div class="col-lg-6">
-                    <img src="./img/hero.png" alt="Bolsas personalizadas RC" class="img-fluid rounded shadow">
+
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <div class="product-showcase">
+
+                        <img src="./img/hero.png" alt="Bolsas personalizadas RC" class="img-fluid hero-image">
+
+                        <div class="hotspot" style="top: 25%; left: 38%;">
+                            <div class="hotspot-dot"></div>
+                            <div class="hotspot-label label-left">
+                                <strong>Costuras Reforzadas</strong>
+                                <small>Soporta peso y uso diario</small>
+                            </div>
+                        </div>
+
+                        <div class="hotspot" style="top: 55%; left: 62%;">
+                            <div class="hotspot-dot"></div>
+                            <div class="hotspot-label label-right">
+                                <strong>Material Premium</strong>
+                                <small>Friselina de alta calidad</small>
+                            </div>
+                        </div>
+
+                        <div class="hotspot" style="top: 70%; left: 48%;">
+                            <div class="hotspot-dot"></div>
+                            <div class="hotspot-label label-bottom">
+                                <strong>Personalización Nítida</strong>
+                                <small>Tu marca destaca</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,23 +97,24 @@
                     <div class="value-card">
                         <h4>Calidad</h4>
                         <p>Materiales premium y acabados impecables en cada bolsa que producimos.</p>
-                        <img src="./img/sellado_ultrasonido.jpg" alt="" width="300px">
+                        <img src="./img/sellado_ultrasonido.jpg" alt="Calidad Sellado" class="qs-img"
+                            onclick="openZoom(this.src, this.alt)"">
                     </div>
                 </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="value-card">
-                        <h4>Innovación</h4>
-                        <p>Técnicas de personalización avanzadas para hacer realidad tu visión.</p>
+                <div class=" col-md-4 text-center mb-4">
+                        <div class="value-card">
+                            <h4>Innovación</h4>
+                            <p>Técnicas de personalización avanzadas para hacer realidad tu visión.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 text-center mb-4">
-                    <div class="value-card">
-                        <h4>Sostenibilidad</h4>
-                        <p>Packaging reutilizable que cuida el medio ambiente y tu marca.</p>
+                    <div class="col-md-4 text-center mb-4">
+                        <div class="value-card">
+                            <h4>Sostenibilidad</h4>
+                            <p>Packaging reutilizable que cuida el medio ambiente y tu marca.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Catálogo de Productos  -->
@@ -160,7 +189,7 @@
                 <div class="col-md-4 mb-4 producto-adicional" style="display: none;">
                     <div class="card product-card h-100">
                         <div class="image-container">
-                            <img src="/img/sobre_x3.jpg" class="card-img-top product-image" alt="Bolsa Ecológica Kraft"
+                            <img src="/img/sobre_x3.jpg" class="card-img-top product-image" alt="Bolsa Sobre"
                                 onclick="openZoom(this.src, this.alt)">
                         </div>
                         <div class="card-body">
