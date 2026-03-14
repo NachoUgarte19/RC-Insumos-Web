@@ -133,4 +133,15 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+// Inicializar Scrollspy manualmente (opcional, pero recomendado)
+var spyContent = document.body;
+var navElement = document.querySelector('#navbarNav');
+
+if (navElement) {
+    new bootstrap.ScrollSpy(spyContent, {
+        target: '#navbarNav',
+        offset: 110 // Ajustá este número según el alto de tu navbar
+    });
+}
+
 

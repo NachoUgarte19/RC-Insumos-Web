@@ -13,7 +13,7 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100" tabindex="0">
     <!-- Navigation  -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
@@ -44,37 +44,12 @@
                 <div class="col-lg-6 text-center text-lg-start">
                     <h1 class="display-4 fw-bold mb-4">Bolsas e indumentaria personalizadas</h1>
                     <p class="lead mb-4">Hacemos tus ideas realidad: soluciones creativas para potenciar tu marca.</p>
-                    <a href="#contacto" class="btn btn-primary btn-lg">Pedí tu presupuesto</a>
+                    <a href="https://wa.me/5491133370374?text=Hola! Me interesa conocer más sobre las bolsas e indumentaria" class="btn btn-primary btn-lg">Pedí tu presupuesto</a>
                 </div>
 
                 <div class="col-lg-6 text-center d-none d-lg-block">
                     <div class="product-showcase">
-
                         <img src="./img/hero.png" alt="Bolsas personalizadas RC" class="img-fluid hero-image">
-
-                        <div class="hotspot" style="top: 25%; left: 38%;">
-                            <div class="hotspot-dot"></div>
-                            <div class="hotspot-label label-left">
-                                <strong>Costuras Reforzadas</strong>
-                                <small>Soporta peso y uso diario</small>
-                            </div>
-                        </div>
-
-                        <div class="hotspot" style="top: 55%; left: 62%;">
-                            <div class="hotspot-dot"></div>
-                            <div class="hotspot-label label-right">
-                                <strong>Material Premium</strong>
-                                <small>Friselina de alta calidad</small>
-                            </div>
-                        </div>
-
-                        <div class="hotspot" style="top: 70%; left: 48%;">
-                            <div class="hotspot-dot"></div>
-                            <div class="hotspot-label label-bottom">
-                                <strong>Personalización Nítida</strong>
-                                <small>Tu marca destaca</small>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -369,80 +344,125 @@
         </div>
     </section>
 
-    <!-- Contacto  -->
-    <section id="contacto" class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center mb-5">
-                    <h2 class="section-title">Contacto</h2>
-                    <p class="lead">¿Listo para crear tu packaging único?</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="contact-info">
-                        <h4 class="mb-4">Hablemos por WhatsApp</h4>
-                        <a href="https://wa.me/5491133370374?text=Hola! Me interesa conocer más sobre las bolsas personalizadas"
-                            class="btn btn-success btn-lg mb-4">
-                            <i class="fab fa-whatsapp me-2"></i>Contactar por WhatsApp
-                        </a>
+    <!-- Contacto y Dudas -->
 
-                        <div class="contact-details">
-                            <div class="mb-3">
-                                <i class="fas fa-map-marker-alt me-2"></i>
-                                <strong>Ubicación:</strong> Villa Luro, Buenos Aires
+    <section class="contact-faq py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold brand-brown">Contacto y Dudas</h2>
+                <hr class="brand-divider mx-auto">
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-stretch">
+
+                <div class="col-lg-5 order-1">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <h4 class="mb-4 brand-brown"><i class="fas fa-question-circle me-2"></i>Dudas frecuentes</h4>
+
+                        <div class="accordion accordion-flush" id="faqAccordion">
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#q1">
+                                        ¿Tienen un mínimo de compra?
+                                    </button>
+                                </h2>
+                                <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 small text-muted">
+                                        Para <strong>bolsas de friselina</strong> el mínimo es de 50 unidades. Para
+                                        <strong>indumentaria</strong>, consultanos según el diseño.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <i class="fas fa-shipping-fast me-2"></i>
-                                <strong>Envíos:</strong> A todo el país
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#q2">
+                                        ¿Cuánto tardan en entregar los pedidos?
+                                    </button>
+                                </h2>
+                                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 small text-muted">
+                                        El tiempo estimado de producción es de <strong>7 a 10 días hábiles</strong> tras
+                                        la aprobación del diseño.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <i class="fab fa-instagram me-2"></i>
-                                <a href="https://instagram.com/insumosrc" target="_blank">@insumosrc</a>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#q3">
+                                        ¿En qué formato debo enviar mi logo?
+                                    </button>
+                                </h2>
+                                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body px-0 small text-muted">
+                                        Lo ideal es en formato <strong>vectorial</strong> (PDF, AI o EPS). También
+                                        aceptamos imágenes en alta resolución.
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <form class="contact-form">
-                        <h4 class="mb-4">O escribinos aquí</h4>
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" required>
+
+                <div class="col-lg-5 order-2">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center text-lg-start">
+                        <h4 class="mb-4 brand-brown"><i class="fas fa-comments me-2"></i>Hablemos por WhatsApp</h4>
+
+                        <p class="small text-muted mb-4">Hacé click en el botón para recibir atención personalizada y
+                            pedir tu presupuesto.</p>
+
+                        <a href="https://wa.me/5491133370374?text=Hola! Me interesa conocer más sobre las bolsas e indumentaria"
+                            class="btn btn-success btn-lg mb-4 w-100 shadow-sm">
+                            <i class="fab fa-whatsapp me-2"></i> Contactar ahora
+                        </a>
+
+                        <div class="mt-auto">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3"><i class="fas fa-map-marker-alt me-2 text-success"></i>
+                                    <strong>Ubicación:</strong> Villa Luro, Buenos Aires</li>
+                                <li class="mb-3"><i class="fas fa-truck me-2 text-success"></i> <strong>Envíos:</strong>
+                                    A todo el país</li>
+                                <li><i class="fab fa-instagram me-2 text-success"></i> @insumosrc</li>
+                            </ul>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4"
-                                placeholder="Contanos sobre tu proyecto: tipo de bolsa, cantidad, diseño, etc."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                    </form>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer  -->
-    <footer class="bg-dark text-light py-4">
+    <footer class="main-footer py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>RC - Bolsas Personalizadas</h5>
-                    <p>Packaging con propósito para tu emprendimiento</p>
+            <div class="row align-items-center">
+                
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h5 class="footer-brand">RC - Bolsas e Indumentaria</h5>
+                    <p class="footer-slogan">Hacemos tus ideas realidad</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <p>&copy; 2026 RC. Todos los derechos reservados.</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/insumosrc" class="text-light me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/5491133370374?text=Hola! Me interesa conocer más sobre las bolsas personalizadas" class="text-light me-3"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailito:rscinsumos@gmail.com" class="text-light me-3"><i class="fas fa-envelope"></i></a>
+                
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="footer-copy">© 2026 RC. Todos los derechos reservados.</p>
+                    <div class="footer-social-links">
+                        <a href="https://instagram.com/insumosrc" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5491133370374?text=Hola! Me interesa conocer más sobre las bolsas e indumentaria" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:rscinsumos@gmail.com" aria-label="Gmail">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </footer>

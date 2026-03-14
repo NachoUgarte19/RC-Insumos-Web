@@ -29,6 +29,19 @@ h6 {
 }
 
 /* Navegación */
+
+/* Estilo para el link activo en el menú */
+.navbar-nav .nav-link.active {
+    color: var(--brand-brown) !important; /* Usamos la variable que creamos antes */
+    font-weight: 700;
+    border-bottom: 2px solid var(--brand-brown);
+}
+
+/* Ajuste de scroll suave para que no pegue el salto brusco */
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.95) !important;
   backdrop-filter: blur(10px);
@@ -319,12 +332,6 @@ h6 {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
-
 .blockquote {
   font-size: 1.1rem;
   font-style: italic;
@@ -349,6 +356,50 @@ h6 {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+
+/* FQ */
+:root {
+  --brand-brown: #6b420f;
+}
+
+/* Colores de texto */
+.brand-brown {
+  color: var(--brand-brown) !important;
+}
+
+/* El divisor (hr) personalizado */
+.brand-divider {
+  width: 60px;
+  border: 2px solid var(--brand-brown);
+  opacity: 1;
+}
+
+/* Ajustes del Acordeón para que combine */
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--brand-brown);
+  font-weight: bold;
+  box-shadow: none;
+}
+
+/* Cambia la flecha de Bootstrap a marrón */
+.accordion-button::after {
+  filter: sepia(100%) hue-rotate(330deg) saturate(500%);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(107, 66, 15, 0.1);
+}
+
+/* Efecto suave en las tarjetas */
+.card.shadow-sm {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card.shadow-sm:hover {
+  transform: translateY(-5px);
 }
 
 /* Contacto */
@@ -393,17 +444,54 @@ h6 {
 }
 
 /* Footer */
-footer {
-  background-color: var(--text-primary) !important;
+.main-footer {
+  background-color: #1a1d20;
+  color: #ffffff;
 }
 
-.social-links a {
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
+/* Título de la marca */
+.footer-brand {
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
 }
 
-.social-links a:hover {
-  color: var(--accent) !important;
+/* Eslogan corregido */
+.footer-slogan {
+  color: #adb5bd;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Copyright */
+.footer-copy {
+  color: #868e96;
+  font-size: 0.85rem;
+}
+
+/* Links de redes sociales */
+.footer-social-links a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.footer-social-links a:hover {
+  color: #f8f1e7;
+  transform: translateY(-3px);
+  display: inline-block;
+}
+
+/* Ajuste para móvil (centrado automático) */
+@media (max-width: 768px) {
+  .footer-social-links a {
+    margin: 0 10px;
+  }
 }
 
 /* Responsive */
@@ -762,5 +850,26 @@ html {
     border-radius: 10px;
     transition: transform 0.3s ease;
     max-width: 300px;
+  }
+}
+
+/* Arreglo exclusivo para Desktop */
+@media (min-width: 992px) {
+
+  .carousel-inner {
+    padding-bottom: 50px !important;
+    /* Espacio para que la sombra no toque el fondo */
+    overflow: visible !important;
+    /* Permite que la tarjeta 'respire' fuera del límite */
+  }
+
+  .testimonial-card {
+    margin-bottom: 20px;
+    min-height: 200px;
+    /* Le da una base sólida para que no colapse */
+  }
+
+  .carousel-item {
+    padding: 10px 0;
   }
 }
