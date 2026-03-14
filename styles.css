@@ -331,6 +331,13 @@ h6 {
   color: var(--text-secondary);
 }
 
+.blockquote-footer {
+  background-color: transparent !important;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0;
+}
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
